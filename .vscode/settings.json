@@ -1,0 +1,81 @@
+{
+  "files.autoSave": "onFocusChange",
+  // #值设置为true时，每次保存的时候自动格式化；
+
+  "python.defaultInterpreterPath": "C:\\Users\\C4565\\.conda\\envs\\py311\\python.exe",
+  "python.envFile": "${workspaceFolder}${pathSeparator}.vscode${pathSeparator}dev.env",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.fontSize": 10,
+  /* 
+   To configure Python to search for modules in the src-folder we alter the default search path. In PyCharm this is done by selecting a source folder. In Visual Studio Code, this is done by setting the PYTHONPATH variable.  
+   */
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}${pathSeparator}src",
+    // "GIT_BASH_ENV": "${workspaceFolder}${pathSeparator}.vscode${pathSeparator}.bash_profile"
+  },
+
+  //自动检查代码
+  // "flake8.args": [],
+
+  // 单元测试
+  "python.testing.cwd": "${workspaceFolder}${pathSeparator}src",
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestPath": "C:\\Users\\*****\\Anaconda\\envs\\sec_master\\Scripts\\pytest.exe",
+  "python.testing.pytestArgs": ["--no-cov", "-s"],
+
+  //Indicates whether to automatically add search paths based on some predefined names (like src)
+  "python.analysis.autoSearchPaths": true,
+  //Specifies extra search paths for import resolution.
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}${pathSeparator}Langchain-Chatchat"
+  ],
+
+  "markdown-preview-github-styles.colorTheme": "light",
+  "autoDocstring.docstringFormat": "google-notypes",
+
+  "workbench.settings.editor": "json",
+  //主题颜色
+  "workbench.colorTheme": "Monokai", // "Visual Studio Dark",
+
+  "editor.fontSize": 10,
+  "debug.console.fontSize": 8,
+  "window.zoomLevel": 2,
+  "editor.wordWrap": "on",
+  "editor.detectIndentation": false,
+
+  "files.associations": {
+    "*.vue": "vue",
+    "*.wpy": "vue",
+    "*.wxml": "html",
+    "*.wxss": "css"
+  },
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  //失去焦点后自动保存
+
+  "editor.formatOnSave": false,
+  //每120行就显示一条线
+  "editor.rulers": [],
+  // 在使用搜索功能时，将这些文件夹/文件排除在外
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/target": true,
+    "**/logs": true
+  },
+  // 这些文件将不会显示在工作空间中
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/*.js": {
+      "when": "$(basename).ts" //ts编译后生成的js文件将不会显示在工作空中
+    },
+    "**/node_modules": true
+  }
+}

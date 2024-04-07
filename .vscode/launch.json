@@ -1,0 +1,53 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}src"
+            }
+        },
+        // {
+        //     "name": "Python Tester: Current File",
+        //     "type": "test",
+        //     "request": "launch",
+        //     "program": "${file}",
+        //     // import to setting when do unit test 
+        //     "purpose": [
+        //         "debug-test"
+        //     ],
+        //     "console": "integratedTerminal",
+        //     "justMyCode": false,
+        //     "env": {
+        //         "PYTHONPATH": "${workspaceFolder}${pathSeparator}Langchain-Chatchat"
+        //     }
+        // }
+        {
+            "name": "node debugger current file",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "NODE_OPTIONS": "--openssl-legacy-provider",
+                // "HTTP_PROXY": "http://127.0.0.1:7890",
+                // "HTTPS_PROXY": "http://127.0.0.1:7890"
+            }
+        },
+        {
+            "name": "Lannch Chrome against localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}${pathSeparator}spotify-web-playback"
+        }
+    ]
+}
